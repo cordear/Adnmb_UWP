@@ -84,7 +84,7 @@ namespace App4
         {
             Grid grid = sender as Grid;
             var id = (((grid.Children.ToList()[0] as StackPanel).Children.ToList()[0] as StackPanel).Children.ToList()[2] as TextBlock).Text;
-            id = id.Replace("  No.", "?id=");
+            id = id.Replace("No.", "?id=");
             GC.Collect();
             Frame.Navigate(typeof(Thread), id);
         }
