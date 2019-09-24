@@ -2,20 +2,25 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:App4"
-    xmlns:PostContents="using:App4.sources"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Custom="using:App4.sources"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core" 
     x:Class="App4.TimeLine"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  
     <ScrollViewer x:Name="rootScrollViewer">
+        <Interactivity:Interaction.Behaviors>
+            
+        </Interactivity:Interaction.Behaviors>
         <StackPanel x:Name="ContentStackPanel" 
                     HorizontalAlignment="Left">
             <ListView x:Name="contentListView">
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="thread"
-                                  x:DataType="PostContents:PostContent">
+                                  x:DataType="Custom:PostContent">
                         <Grid x:Name="grid" 
                               Margin="0,2,0,2" 
                               HorizontalAlignment="Stretch"
