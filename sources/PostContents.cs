@@ -50,6 +50,11 @@ namespace App4.sources
         public string img { get; set; }
         public string ext { get; set; }
         public string name { get; set; }
+        public string imgUri { get { return "https://nmbimg.fastmirror.org/image/" + img.Replace("\\", "") + ext; } }
+        public string idFormat { get { return "No." + id; } }
+        public string info { get { return now + "  ID:" + userid; } }
+        public string threadContent { get { return string.Format("<html><body>{0}</body></html>", content); } }
+
     }
 
     public class ThreadItem

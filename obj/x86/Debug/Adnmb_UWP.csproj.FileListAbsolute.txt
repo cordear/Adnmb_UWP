@@ -1,5 +1,4 @@
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App.xbf
-C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\BlankPage1.xbf
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\MainPage.xbf
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Thread.xbf
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\TimeLine.xbf
@@ -17,8 +16,6 @@ C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.UI.Xaml.Markup.win
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Adnmb_UWP.csprojAssemblyReference.cache
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App.g.i.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App.g.cs
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\BlankPage1.g.i.cs
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\BlankPage1.g.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MainPage.g.i.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MainPage.g.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Thread.g.i.cs
@@ -27,12 +24,10 @@ C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\TimeLine.g.i.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\TimeLine.g.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App.xaml
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\BlankPage1.xaml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MainPage.xaml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Thread.xaml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\TimeLine.xaml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App.xbf
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\BlankPage1.xbf
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MainPage.xbf
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Thread.xbf
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\TimeLine.xbf
@@ -59,3 +54,9 @@ C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885022160000000.json
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactions.pdb
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactivity.pdb
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml

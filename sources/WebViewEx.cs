@@ -15,7 +15,7 @@ namespace App4.sources
                 return (string)obj.GetValue(UriProperty);
             }
 
-            public static void SetUri(Windows.UI.Xaml.DependencyObject obj, string value)
+            public static void SetUri(DependencyObject obj, string value)
             {
                 obj.SetValue(UriProperty, value);
             }

@@ -27,6 +27,8 @@ namespace App4
     /// </summary>
     public sealed partial class TimeLine : Page
     {
+        
+        
         /*  The current structure:
          *  ContentStackPanel -> grid -> rootStackPanel -> infoStackPanel -> titleTextBlock
          *                    |                         |                 -> nameTextBlock
@@ -45,8 +47,9 @@ namespace App4
 
             List<PostContent> postContents = JsonConvert.DeserializeObject<List<PostContent>>(result);
             contentListView.ItemsSource = postContents;
-            
         }
+
+
 
         private string GetPostContent(string uri)
         {
@@ -88,6 +91,7 @@ namespace App4
             GC.Collect();
             Frame.Navigate(typeof(Thread), id);
         }
+
 
     }
 }

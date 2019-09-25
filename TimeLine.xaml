@@ -12,9 +12,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
   
     <ScrollViewer x:Name="rootScrollViewer">
-        <Interactivity:Interaction.Behaviors>
-            
-        </Interactivity:Interaction.Behaviors>
         <StackPanel x:Name="ContentStackPanel" 
                     HorizontalAlignment="Left">
             <ListView x:Name="contentListView">
