@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Navigation;
 using App4.sources;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Shapes;
+using System.Collections.ObjectModel;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App4
@@ -28,7 +29,10 @@ namespace App4
     public sealed partial class TimeLine : Page
     {
         
-        
+        static int timeLinePage = 1;
+        const string uri = "https://nmb.fastmirror.org/Api/timeline";
+        ObservableCollection<PostContent> postContents;
+
         /*  The current structure:
          *  ContentStackPanel -> grid -> rootStackPanel -> infoStackPanel -> titleTextBlock
          *                    |                         |                 -> nameTextBlock
@@ -42,10 +46,8 @@ namespace App4
         public TimeLine()
         {
             this.InitializeComponent();
-            const string uri = "https://nmb.fastmirror.org/Api/timeline";
             var result = GetPostContent(uri);
-
-            List<PostContent> postContents = JsonConvert.DeserializeObject<List<PostContent>>(result);
+            postContents = new ObservableCollection<PostContent>(JsonConvert.DeserializeObject<List<PostContent>>(result));
             contentListView.ItemsSource = postContents;
         }
 
@@ -88,10 +90,22 @@ namespace App4
             Grid grid = sender as Grid;
             var id = (((grid.Children.ToList()[0] as StackPanel).Children.ToList()[0] as StackPanel).Children.ToList()[2] as TextBlock).Text;
             id = id.Replace("No.", "?id=");
+            timeLinePage = 1;
             GC.Collect();
             Frame.Navigate(typeof(Thread), id);
         }
 
-
+        private void rootScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+            if((sender as ScrollViewer).VerticalOffset == (sender as ScrollViewer).ScrollableHeight)
+            {
+                string newUri = string.Format("{0}?page={1}", uri, ++timeLinePage);
+                var result = GetPostContent(newUri);
+                foreach(var thread in new ObservableCollection<PostContent>(JsonConvert.DeserializeObject<List<PostContent>>(result)))
+                {
+                    postContents.Add(thread);
+                }
+            }
+        }
     }
 }

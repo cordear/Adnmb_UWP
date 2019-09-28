@@ -23,6 +23,7 @@
     <RootType FullName="App4.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
+      <RootEvent Name="ViewChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="HorizontalAlignment" />

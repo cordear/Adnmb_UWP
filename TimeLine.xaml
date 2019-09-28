@@ -10,18 +10,16 @@
     x:Class="App4.TimeLine"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-  
-    <ScrollViewer x:Name="rootScrollViewer">
-        <StackPanel x:Name="ContentStackPanel" 
-                    HorizontalAlignment="Left">
+
+    <ScrollViewer x:Name="rootScrollViewer"
+                  ViewChanged="rootScrollViewer_ViewChanged">
+        <StackPanel x:Name="ContentStackPanel">
             <ListView x:Name="contentListView">
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="thread"
                                   x:DataType="Custom:PostContent">
                         <Grid x:Name="grid" 
                               Margin="0,2,0,2" 
-                              HorizontalAlignment="Stretch"
-                              VerticalAlignment="Stretch"
                               Background="#D0D0D0D0"
                               MinHeight="100"
                               Tapped="Grid_Tapped">

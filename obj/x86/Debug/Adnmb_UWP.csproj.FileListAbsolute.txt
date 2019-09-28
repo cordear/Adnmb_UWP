@@ -10,6 +10,10 @@ C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\AppxManifest.xml
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Core\App4.exe
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Adnmb_UWP.build.appxrecipe
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactions.pdb
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactivity.pdb
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\System.Runtime.dll
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
@@ -32,7 +36,6 @@ C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MainPage.xbf
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Thread.xbf
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\TimeLine.xbf
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\XamlSaveStateFile.xml
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Adnmb_UWP.csproj.CoreCompileInputs.cache
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Adnmb_UWP.csproj.CopyComplete
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App4.exe
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App4.pdb
@@ -52,11 +55,7 @@ C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\pri.resfiles.intermediate
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\qualifiers.txt
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885022160000000.json
-C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactions.dll
-C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactions.pdb
-C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactivity.dll
-C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactivity.pdb
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885022160000000.json
