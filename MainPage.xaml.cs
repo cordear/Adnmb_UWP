@@ -33,7 +33,6 @@ namespace App4
             if (contentPage.CanGoBack)
             {
                 contentPage.GoBack();
-                GC.Collect();
             }
         }
     }

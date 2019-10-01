@@ -91,7 +91,7 @@ namespace App4
             var id = (((grid.Children.ToList()[0] as StackPanel).Children.ToList()[0] as StackPanel).Children.ToList()[2] as TextBlock).Text;
             id = id.Replace("No.", "?id=");
             timeLinePage = 1;
-            GC.Collect();
+            postContents = null;
             Frame.Navigate(typeof(Thread), id);
         }
 

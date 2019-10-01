@@ -37,6 +37,7 @@ namespace App4.sources
         public string idFormat { get { return "No." + id; } }
         public string info { get { return now + "  ID:" + userid; } }
         public string threadContent { get{ return string.Format("<html><body>{0}</body></html>", content); } }
+
     }
     public class ReplysItem
     {
@@ -73,5 +74,10 @@ namespace App4.sources
         public string admin { get; set; }
         public List<ReplysItem> replys { get; set; }
         public string replyCount { get; set; }
+        public string idFormat { get { return "No." + id; } }
+        public string imgUri { get { return "https://nmbimg.fastmirror.org/image/" + img.Replace("\\", "") + ext; } }
+        public string threadContent { get { return string.Format("<html><body>{0}</body></html>", content); } }
+        public string info { get { return now + "  ID:" + userid; } }
+
     }
 }

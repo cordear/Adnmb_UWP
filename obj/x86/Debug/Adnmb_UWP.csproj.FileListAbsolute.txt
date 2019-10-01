@@ -17,7 +17,6 @@ C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.Xaml.Interactivity
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\System.Runtime.dll
 C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Adnmb_UWP.csprojAssemblyReference.cache
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App.g.i.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\App.g.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\MainPage.g.i.cs

@@ -12,6 +12,39 @@
     <ScrollViewer x:Name="rootScrollViewer">
         <StackPanel x:Name="ContentStackPanel" 
                     HorizontalAlignment="Left">
+            <ListView x:Name="threadListView">
+                    <Grid  Margin="0,2,0,2" 
+                           HorizontalAlignment="Stretch"
+                           VerticalAlignment="Stretch"
+                           Background="#D0D0D0D0"
+                           MinHeight="100">
+                        <StackPanel>
+                            <StackPanel  Orientation="Horizontal">
+                                <TextBlock  Foreground="#FFCC1105"
+                                            Margin="0,0,5,0"
+                                            Text="{x:Bind threaditems.title}"/>
+                                <TextBlock  Foreground="#FF117743"
+                                            Margin="5,0,5,0"
+                                            Text="{x:Bind threaditems.name}"/>
+                                <TextBlock  Foreground="#FF005599"
+                                            Margin="5,0,5,0"
+                                            Text="{x:Bind threaditems.idFormat}"/>
+                            </StackPanel>
+                            <TextBlock  Text="{x:Bind threaditems.info}"/>
+                            <StackPanel  Orientation="Horizontal">
+                                <Image  Source="{x:Bind threaditems.imgUri}"
+                                        MaxHeight="250"
+                                        MaxWidth="250"
+                                        HorizontalAlignment="Left"
+                                        Tapped="Image_Tapped"/>
+                                <WebView  Custom:WebViewEx.Uri="{x:Bind threaditems.threadContent}"
+                                          MinHeight="400"
+                                          MinWidth="600"
+                                          DefaultBackgroundColor="Transparent"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+            </ListView>
             <ListView x:Name="contentListView">
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="thread"
@@ -21,8 +54,7 @@
                               HorizontalAlignment="Stretch"
                               VerticalAlignment="Stretch"
                               Background="#D0D0D0D0"
-                              MinHeight="100"
-                              Tapped="Grid_Tapped">
+                              MinHeight="100">
                             <StackPanel x:Name="rootStackPanel">
                                 <StackPanel x:Name="infoStackpanel"
                                             Orientation="Horizontal">

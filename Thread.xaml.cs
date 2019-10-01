@@ -49,7 +49,6 @@ namespace App4
             var result = GetPostContent(uri);
             threaditems = JsonConvert.DeserializeObject<ThreadItem>(result);
             contentListView.ItemsSource = threaditems.replys;
-
         }
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -74,14 +73,6 @@ namespace App4
             e.Handled = true;
         }
 
-        private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Grid grid = sender as Grid;
-            var id = (((grid.Children.ToList()[0] as StackPanel).Children.ToList()[0] as StackPanel).Children.ToList()[2] as TextBlock).Text;
-            id = id.Replace("No.", "?id=");
-            GC.Collect();
-            Frame.Navigate(typeof(Thread), id);
-        }
 
     }
 }
