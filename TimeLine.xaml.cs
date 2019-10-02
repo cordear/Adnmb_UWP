@@ -46,9 +46,6 @@ namespace App4
         public TimeLine()
         {
             this.InitializeComponent();
-            var result = GetPostContent(uri);
-            postContents = new ObservableCollection<PostContent>(JsonConvert.DeserializeObject<List<PostContent>>(result));
-            contentListView.ItemsSource = postContents;
         }
 
 
@@ -91,10 +88,18 @@ namespace App4
             var id = (((grid.Children.ToList()[0] as StackPanel).Children.ToList()[0] as StackPanel).Children.ToList()[2] as TextBlock).Text;
             id = id.Replace("No.", "?id=");
             timeLinePage = 1;
-            postContents = null;
             Frame.Navigate(typeof(Thread), id);
         }
-
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            postContents = null;
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var result = GetPostContent(uri);
+            postContents = new ObservableCollection<PostContent>(JsonConvert.DeserializeObject<List<PostContent>>(result));
+            contentListView.ItemsSource = postContents;
+        }
         private void rootScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
             if((sender as ScrollViewer).VerticalOffset == (sender as ScrollViewer).ScrollableHeight)

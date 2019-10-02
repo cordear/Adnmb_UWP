@@ -50,6 +50,11 @@ namespace App4
             threaditems = JsonConvert.DeserializeObject<ThreadItem>(result);
             contentListView.ItemsSource = threaditems.replys;
         }
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            threaditems.Dispose();
+            threaditems = null;
+        }
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Flyout imageFlyout = new Flyout();
@@ -72,7 +77,5 @@ namespace App4
             imageFlyout.ShowAt((FrameworkElement)sender);
             e.Handled = true;
         }
-
-
     }
 }

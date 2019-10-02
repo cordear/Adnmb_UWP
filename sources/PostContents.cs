@@ -1,22 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace App4.sources
 {
-    public class Replys
-    {
-        public string id { get; set; }
-        public string img { get; set; }
-        public string ext { get; set; }
-        public string now { get; set; }
-        public string userid { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public string title { get; set; }
-        public string content { get; set; }
-        public string sage { get; set; }
-        public string admin { get; set; }
-        public string status { get; set; }
-    }
+    //public class Replys
+    //{
+    //    public string id { get; set; }
+    //    public string img { get; set; }
+    //    public string ext { get; set; }
+    //    public string now { get; set; }
+    //    public string userid { get; set; }
+    //    public string name { get; set; }
+    //    public string email { get; set; }
+    //    public string title { get; set; }
+    //    public string content { get; set; }
+    //    public string sage { get; set; }
+    //    public string admin { get; set; }
+    //    public string status { get; set; }
+    //}
     public class PostContent
     {
         public string id { get; set; }
@@ -26,12 +27,12 @@ namespace App4.sources
         public string now { get; set; }
         public string userid { get; set; }
         public string name { get; set; }
-        public string email { get; set; }
+        //public string email { get; set; }
         public string title { get; set; }
         public string content { get; set; }
         public string sage { get; set; }
         public string admin { get; set; }
-        public List<Replys> replys { get; set; }
+        //public List<Replys> replys { get; set; }
         public string replyCount { get; set; }
         public string imgUri { get { return "https://nmbimg.fastmirror.org/image/"+img.Replace("\\", "") + ext; } }
         public string idFormat { get { return "No." + id; } }
@@ -45,7 +46,7 @@ namespace App4.sources
         public string userid { get; set; }
         public int admin { get; set; }
         public string title { get; set; }
-        public string email { get; set; }
+        //public string email { get; set; }
         public string now { get; set; }
         public string content { get; set; }
         public string img { get; set; }
@@ -58,8 +59,9 @@ namespace App4.sources
 
     }
 
-    public class ThreadItem
+    public class ThreadItem:IDisposable
     {
+        private bool disposed = false;
         public string id { get; set; }
         public string fid { get; set; }
         public string img { get; set; }
@@ -67,7 +69,7 @@ namespace App4.sources
         public string now { get; set; }
         public string userid { get; set; }
         public string name { get; set; }
-        public string email { get; set; }
+        //public string email { get; set; }
         public string title { get; set; }
         public string content { get; set; }
         public string sage { get; set; }
@@ -78,6 +80,26 @@ namespace App4.sources
         public string imgUri { get { return "https://nmbimg.fastmirror.org/image/" + img.Replace("\\", "") + ext; } }
         public string threadContent { get { return string.Format("<html><body>{0}</body></html>", content); } }
         public string info { get { return now + "  ID:" + userid; } }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        // Protected implementation of Dispose pattern.
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed)
+                return;
+
+            if (disposing)
+            {
+                replys.Clear();
+                replys = null;
+            }
+
+            disposed = true;
+        }
 
     }
 }

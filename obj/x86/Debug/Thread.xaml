@@ -20,24 +20,24 @@
                            MinHeight="100">
                         <StackPanel>
                             <StackPanel  Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='20'  Foreground="#FFCC1105"
+                                <TextBlock x:ConnectionId='21'  Foreground="#FFCC1105"
                                             Margin="0,0,5,0"
                                                                              />
-                                <TextBlock x:ConnectionId='21'  Foreground="#FF117743"
+                                <TextBlock x:ConnectionId='22'  Foreground="#FF117743"
                                             Margin="5,0,5,0"
                                                                             />
-                                <TextBlock x:ConnectionId='22'  Foreground="#FF005599"
+                                <TextBlock x:ConnectionId='23'  Foreground="#FF005599"
                                             Margin="5,0,5,0"
                                                                                 />
                             </StackPanel>
-                            <TextBlock x:ConnectionId='17'                                  />
+                            <TextBlock x:ConnectionId='18'                                  />
                             <StackPanel  Orientation="Horizontal">
-                                <Image x:ConnectionId='18'                                      
+                                <Image x:ConnectionId='19'                                      
                                         MaxHeight="250"
                                         MaxWidth="250"
                                         HorizontalAlignment="Left"
                                                              />
-                                <WebView x:ConnectionId='19'                                                           
+                                <WebView x:ConnectionId='20'                                                           
                                           MinHeight="400"
                                           MinWidth="600"
                                           DefaultBackgroundColor="Transparent"/>
@@ -45,11 +45,17 @@
                         </StackPanel>
                     </Grid>
             </ListView>
-            <ListView x:ConnectionId='5' x:Name="contentListView">
+            <ListView x:ConnectionId='5' x:Name="contentListView"
+                      SelectionMode="None">
+                <ListView.Template>
+                    <ControlTemplate>
+                        <ItemsPresenter />
+                    </ControlTemplate>
+                </ListView.Template>
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="thread"
                                                                 >
-                        <Grid x:ConnectionId='7' x:Name="grid" 
+                        <Grid x:ConnectionId='8' x:Name="grid" 
                               Margin="0,2,0,2" 
                               HorizontalAlignment="Stretch"
                               VerticalAlignment="Stretch"
@@ -58,30 +64,30 @@
                             <StackPanel x:Name="rootStackPanel">
                                 <StackPanel x:Name="infoStackpanel"
                                             Orientation="Horizontal">
-                                    <TextBlock x:ConnectionId='14' x:Name="titleTextBlock"
+                                    <TextBlock x:ConnectionId='15' x:Name="titleTextBlock"
                                                Foreground="#FFCC1105"
                                                Margin="0,0,5,0"
                                                                     />
-                                    <TextBlock x:ConnectionId='15' x:Name="nameTextBlock"
+                                    <TextBlock x:ConnectionId='16' x:Name="nameTextBlock"
                                                Foreground="#FF117743"
                                                Margin="5,0,5,0"
                                                                    />
-                                    <TextBlock x:ConnectionId='16' x:Name="noTextBlock"
+                                    <TextBlock x:ConnectionId='17' x:Name="noTextBlock"
                                                Foreground="#FF005599"
                                                Margin="5,0,5,0"
                                                                        />
                                 </StackPanel>
-                                <TextBlock x:ConnectionId='10' x:Name="infoTextBlock"
+                                <TextBlock x:ConnectionId='11' x:Name="infoTextBlock"
                                                                />
                                 <StackPanel x:Name="contentStackPanel"
                                             Orientation="Horizontal">
-                                    <Image x:ConnectionId='12' x:Name="image"
+                                    <Image x:ConnectionId='13' x:Name="image"
                                                                    
                                            MaxHeight="250"
                                            MaxWidth="250"
                                            HorizontalAlignment="Left"
                                                                 />
-                                    <WebView x:ConnectionId='13' x:Name="ThreadWebview"
+                                    <WebView x:ConnectionId='14' x:Name="ThreadWebview"
                                                                                           
                                              MinHeight="400"
                                              MinWidth="600"

@@ -45,7 +45,13 @@
                         </StackPanel>
                     </Grid>
             </ListView>
-            <ListView x:Name="contentListView">
+            <ListView x:Name="contentListView"
+                      SelectionMode="None">
+                <ListView.Template>
+                    <ControlTemplate>
+                        <ItemsPresenter />
+                    </ControlTemplate>
+                </ListView.Template>
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="thread"
                                   x:DataType="Custom:ReplysItem">
