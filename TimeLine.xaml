@@ -6,10 +6,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Custom="using:App4.sources"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:core="using:Microsoft.Xaml.Interactions.Core" 
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:muxcontrols="using:Windows.UI.Xaml.Controls"
     x:Class="App4.TimeLine"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <muxcontrols:CommandBarFlyout Placement="Right" x:Name="CommandBarFlyout1">
+            <AppBarButton Label="Share" Icon="View" ToolTipService.ToolTip="Share" Click="AppBarButton_Click" />
+            <AppBarButton Label="Save" Icon="Save" ToolTipService.ToolTip="Save" Click="AppBarButton_Click_1" />
+        </muxcontrols:CommandBarFlyout>
+    </Page.Resources>
+
 
     <ScrollViewer x:Name="rootScrollViewer"
                   ViewChanged="rootScrollViewer_ViewChanged">
@@ -56,7 +65,8 @@
                                            MaxHeight="250"
                                            MaxWidth="250"
                                            HorizontalAlignment="Left"
-                                           Tapped="Image_Tapped"/>
+                                           ContextRequested="image_ContextRequested"
+                                           Tapped="image_Tapped"/>
                                     <WebView x:Name="ThreadWebview"
                                              Custom:WebViewEx.Uri="{x:Bind threadContent}"
                                              MinHeight="400"

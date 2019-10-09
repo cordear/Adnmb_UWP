@@ -59,28 +59,28 @@ namespace App4
             httpClient.Dispose();
             return result;
         }
-        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Flyout imageFlyout = new Flyout();
-            Image orginImage = new Image();
-            Button saveButton = new Button();
-            StackPanel flyoutStackPanel = new StackPanel
-            {
-                HorizontalAlignment = HorizontalAlignment.Stretch,
-                VerticalAlignment = VerticalAlignment.Stretch
-            };
+        //private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        //{
+        //    Flyout imageFlyout = new Flyout();
+        //    Image orginImage = new Image();
+        //    Button saveButton = new Button();
+        //    StackPanel flyoutStackPanel = new StackPanel
+        //    {
+        //        HorizontalAlignment = HorizontalAlignment.Stretch,
+        //        VerticalAlignment = VerticalAlignment.Stretch
+        //    };
 
-            flyoutStackPanel.Children.Add(orginImage);
-            orginImage.Source = (sender as Image).Source;
+        //    flyoutStackPanel.Children.Add(orginImage);
+        //    orginImage.Source = (sender as Image).Source;
             
 
-            flyoutStackPanel.Children.Add(saveButton);
-            saveButton.Content = "Save";
+        //    flyoutStackPanel.Children.Add(saveButton);
+        //    saveButton.Content = "Save";
 
-            imageFlyout.Content = flyoutStackPanel;
-            imageFlyout.ShowAt((FrameworkElement)sender);
-            e.Handled = true;
-        }
+        //    imageFlyout.Content = flyoutStackPanel;
+        //    imageFlyout.ShowAt((FrameworkElement)sender);
+        //    e.Handled = true;
+        //}
 
         private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -111,6 +111,32 @@ namespace App4
                     postContents.Add(thread);
                 }
             }
+        }
+        private void showMenu(bool isTransient, object sender)
+        {
+            FlyoutShowOptions myOption = new FlyoutShowOptions();
+            myOption.ShowMode = isTransient ? FlyoutShowMode.Transient : FlyoutShowMode.Standard;
+            if(sender != null) CommandBarFlyout1.ShowAt(sender as Image, myOption);
+        }
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void image_ContextRequested(UIElement sender, ContextRequestedEventArgs args)
+        {
+            showMenu(false, null);
+
+        }
+
+        private void image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            showMenu(true, (sender as Image));
+            e.Handled = true;
         }
     }
 }
