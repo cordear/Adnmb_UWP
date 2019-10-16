@@ -14,7 +14,7 @@
 
     <Page.Resources>
         <muxcontrols:CommandBarFlyout Placement="Right" x:Name="CommandBarFlyout1">
-            <AppBarButton Label="Share" Icon="View" ToolTipService.ToolTip="Share" Click="AppBarButton_Click" />
+            <AppBarButton Label="View" Icon="View" ToolTipService.ToolTip="View" Click="AppBarButton_Click" />
             <AppBarButton Label="Save" Icon="Save" ToolTipService.ToolTip="Save" Click="AppBarButton_Click_1" />
         </muxcontrols:CommandBarFlyout>
     </Page.Resources>

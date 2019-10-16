@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.17763": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -329,6 +338,15 @@
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -835,6 +853,15 @@
       }
     },
     "UAP,Version=v10.0.17763/win10-arm-aot": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -1342,6 +1369,15 @@
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -1849,6 +1885,15 @@
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -2355,6 +2400,15 @@
       }
     },
     "UAP,Version=v10.0.17763/win10-x64-aot": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -2862,6 +2916,15 @@
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -3368,6 +3431,15 @@
       }
     },
     "UAP,Version=v10.0.17763/win10-x86-aot": {
+      "lindexi.uwp.src.ImageStorage/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/imageuwp.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/imageuwp.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -3876,6 +3948,18 @@
     }
   },
   "libraries": {
+    "lindexi.uwp.src.ImageStorage/1.0.0": {
+      "sha512": "NduJR7y/9vQB4zREhuRpYZDfjWpvdXcVifpHEx+QRcznJ4hCZ+jf2yC0rQS3r99/DqjUIfIz2Qg4DMzd6wBXnw==",
+      "type": "package",
+      "path": "lindexi.uwp.src.imagestorage/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcore50/imageuwp.dll",
+        "lindexi.uwp.src.imagestorage.1.0.0.nupkg.sha512",
+        "lindexi.uwp.src.imagestorage.nuspec"
+      ]
+    },
     "Microsoft.Net.Native.Compiler/2.2.3": {
       "sha512": "u3AtYGuq1wFEXYug2PYEM/BsfD30MwvPdfYa5aUS9aIsadV4YMGwgXBurrf6yazlfSz4jBSPh02Jc/skkBYseA==",
       "type": "package",
@@ -8406,7 +8490,8 @@
     "UAP,Version=v10.0.17763": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.8",
       "Microsoft.Xaml.Behaviors.Uwp.Managed >= 2.0.1",
-      "Newtonsoft.Json >= 12.0.2"
+      "Newtonsoft.Json >= 12.0.2",
+      "lindexi.uwp.src.ImageStorage >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8457,6 +8542,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.2, )"
+          },
+          "lindexi.uwp.src.ImageStorage": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

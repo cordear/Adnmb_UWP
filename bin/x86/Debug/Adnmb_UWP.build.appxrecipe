@@ -28,6 +28,9 @@
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App4.exe">
       <PackagePath>entrypoint\App4.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\lindexi.uwp.src.imagestorage\1.0.0\lib\netcore50\imageuwp.dll">
+      <PackagePath>imageuwp.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.1\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
     </AppxPackagedFile>
@@ -81,6 +84,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\ImageDetail.xbf">
+      <PackagePath>ImageDetail.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>

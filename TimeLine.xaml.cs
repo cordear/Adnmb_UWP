@@ -19,6 +19,12 @@ using App4.sources;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Shapes;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using Windows.Storage.Streams;
+using Windows.Web.Http;
+using Windows.Storage;
+using Windows.ApplicationModel.Core;
+using Windows.UI.ViewManagement;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App4
@@ -53,34 +59,12 @@ namespace App4
         private string GetPostContent(string uri)
         {
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            HttpClient httpClient = new HttpClient(httpClientHandler);
+            System.Net.Http.HttpClient httpClient = new System.Net.Http.HttpClient(httpClientHandler);
             httpClientHandler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
             string result = httpClient.GetStringAsync(uri).Result;
             httpClient.Dispose();
             return result;
         }
-        //private void Image_Tapped(object sender, TappedRoutedEventArgs e)
-        //{
-        //    Flyout imageFlyout = new Flyout();
-        //    Image orginImage = new Image();
-        //    Button saveButton = new Button();
-        //    StackPanel flyoutStackPanel = new StackPanel
-        //    {
-        //        HorizontalAlignment = HorizontalAlignment.Stretch,
-        //        VerticalAlignment = VerticalAlignment.Stretch
-        //    };
-
-        //    flyoutStackPanel.Children.Add(orginImage);
-        //    orginImage.Source = (sender as Image).Source;
-            
-
-        //    flyoutStackPanel.Children.Add(saveButton);
-        //    saveButton.Content = "Save";
-
-        //    imageFlyout.Content = flyoutStackPanel;
-        //    imageFlyout.ShowAt((FrameworkElement)sender);
-        //    e.Handled = true;
-        //}
 
         private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -118,14 +102,35 @@ namespace App4
             myOption.ShowMode = isTransient ? FlyoutShowMode.Transient : FlyoutShowMode.Standard;
             if(sender != null) CommandBarFlyout1.ShowAt(sender as Image, myOption);
         }
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //CommandBarFlyout1.Hide();
+            //ContentDialog contentDialog = new ContentDialog();
+            //Image image = new Image();
+            //image.Source = (CommandBarFlyout1.Target as Image).Source;
+            //contentDialog.Content = image;
+            //contentDialog.PrimaryButtonText = "Save";
+            //contentDialog.CloseButtonText = "Close";
+            //contentDialog.DefaultButton = ContentDialogButton.Close;
+            //await contentDialog.ShowAsync();
+            CoreApplicationView newView = CoreApplication.CreateNewView();
+            int newViewId = 0;
+            var test = ((CommandBarFlyout1.Target as Image).GetValue(Image.SourceProperty) as BitmapImage).UriSource;
+            await newView.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            {
+                Frame frame = new Frame();
+                frame.Navigate(typeof(ImageDetail), test);
+                Window.Current.Content = frame;
+                Window.Current.Activate();
+                newViewId = ApplicationView.GetForCurrentView().Id;
+            });
+            bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
         }
 
         private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
         {
-
+            imageSave imageSave = new imageSave();
+            imageSave.downLoadImage(((CommandBarFlyout1.Target as Image).GetValue(Image.SourceProperty) as BitmapImage).UriSource);
         }
         private void image_ContextRequested(UIElement sender, ContextRequestedEventArgs args)
         {

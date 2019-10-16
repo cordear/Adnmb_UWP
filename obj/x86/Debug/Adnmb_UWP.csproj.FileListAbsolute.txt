@@ -58,4 +58,9 @@ C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Microsoft.Xaml.Interactions.
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885022160000000.json
-C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Adnmb_UWP.csprojAssemblyReference.cache
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\imageuwp.dll
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\ImageDetail.xbf
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.g.i.cs
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.g.cs
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.xaml
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.xbf
