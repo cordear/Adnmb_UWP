@@ -64,3 +64,4 @@ C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.g.i.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.g.cs
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.xaml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ImageDetail.xbf
+C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Adnmb_UWP.csprojAssemblyReference.cache

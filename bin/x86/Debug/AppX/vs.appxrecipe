@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-16T16:59:41.633</Modified>
+      <Modified>2019-10-17T15:39:59.285</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App4.exe">
       <PackagePath>entrypoint\App4.exe</PackagePath>
-      <Modified>2019-10-16T16:59:39.326</Modified>
+      <Modified>2019-10-17T15:39:58.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\lindexi.uwp.src.imagestorage\1.0.0\lib\netcore50\imageuwp.dll">
       <PackagePath>imageuwp.dll</PackagePath>
@@ -106,27 +106,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App4.xr.xml">
       <PackagePath>App4.xr.xml</PackagePath>
-      <Modified>2019-10-16T16:59:39.032</Modified>
+      <Modified>2019-10-17T15:38:29.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-10-16T16:59:39.071</Modified>
+      <Modified>2019-10-17T15:38:29.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\ImageDetail.xbf">
       <PackagePath>ImageDetail.xbf</PackagePath>
-      <Modified>2019-10-16T16:59:39.072</Modified>
+      <Modified>2019-10-17T15:39:58.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-10-16T16:59:39.072</Modified>
+      <Modified>2019-10-17T15:38:29.748</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Thread.xbf">
       <PackagePath>Thread.xbf</PackagePath>
-      <Modified>2019-10-16T16:59:39.073</Modified>
+      <Modified>2019-10-17T15:38:29.748</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\TimeLine.xbf">
       <PackagePath>TimeLine.xbf</PackagePath>
-      <Modified>2019-10-16T16:59:39.073</Modified>
+      <Modified>2019-10-17T15:38:29.748</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -134,11 +134,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-10-16T16:59:39.762</Modified>
+      <Modified>2019-10-17T04:23:54.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Core\App4.exe">
       <PackagePath>App4.exe</PackagePath>
-      <Modified>2019-10-16T16:59:41.621</Modified>
+      <Modified>2019-10-17T15:39:59.280</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

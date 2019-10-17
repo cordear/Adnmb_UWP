@@ -1,30 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net;
+﻿using App4.sources;
 using Newtonsoft.Json;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using Windows.ApplicationModel.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using App4.sources;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Shapes;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using Windows.Storage.Streams;
-using Windows.Web.Http;
-using Windows.Storage;
-using Windows.ApplicationModel.Core;
-using Windows.UI.ViewManagement;
+using Windows.UI.Xaml.Navigation;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App4
@@ -34,7 +23,7 @@ namespace App4
     /// </summary>
     public sealed partial class TimeLine : Page
     {
-        
+
         static int timeLinePage = 1;
         const string uri = "https://nmb.fastmirror.org/Api/timeline";
         ObservableCollection<PostContent> postContents;
@@ -86,11 +75,11 @@ namespace App4
         }
         private void rootScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
-            if((sender as ScrollViewer).VerticalOffset == (sender as ScrollViewer).ScrollableHeight)
+            if ((sender as ScrollViewer).VerticalOffset == (sender as ScrollViewer).ScrollableHeight)
             {
                 string newUri = string.Format("{0}?page={1}", uri, ++timeLinePage);
                 var result = GetPostContent(newUri);
-                foreach(var thread in new ObservableCollection<PostContent>(JsonConvert.DeserializeObject<List<PostContent>>(result)))
+                foreach (var thread in new ObservableCollection<PostContent>(JsonConvert.DeserializeObject<List<PostContent>>(result)))
                 {
                     postContents.Add(thread);
                 }
@@ -100,19 +89,10 @@ namespace App4
         {
             FlyoutShowOptions myOption = new FlyoutShowOptions();
             myOption.ShowMode = isTransient ? FlyoutShowMode.Transient : FlyoutShowMode.Standard;
-            if(sender != null) CommandBarFlyout1.ShowAt(sender as Image, myOption);
+            if (sender != null) CommandBarFlyout1.ShowAt(sender as Image, myOption);
         }
         private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            //CommandBarFlyout1.Hide();
-            //ContentDialog contentDialog = new ContentDialog();
-            //Image image = new Image();
-            //image.Source = (CommandBarFlyout1.Target as Image).Source;
-            //contentDialog.Content = image;
-            //contentDialog.PrimaryButtonText = "Save";
-            //contentDialog.CloseButtonText = "Close";
-            //contentDialog.DefaultButton = ContentDialogButton.Close;
-            //await contentDialog.ShowAsync();
             CoreApplicationView newView = CoreApplication.CreateNewView();
             int newViewId = 0;
             var test = ((CommandBarFlyout1.Target as Image).GetValue(Image.SourceProperty) as BitmapImage).UriSource;
@@ -130,7 +110,8 @@ namespace App4
         private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
         {
             imageSave imageSave = new imageSave();
-            imageSave.downLoadImage(((CommandBarFlyout1.Target as Image).GetValue(Image.SourceProperty) as BitmapImage).UriSource);
+            imageSave.SaveImage(((CommandBarFlyout1.Target as Image).GetValue(Image.SourceProperty) as BitmapImage).UriSource);
+            
         }
         private void image_ContextRequested(UIElement sender, ContextRequestedEventArgs args)
         {

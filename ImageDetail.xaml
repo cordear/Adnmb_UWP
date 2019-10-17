@@ -7,8 +7,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-        <Image Name="imageDetail"/>
+    <Grid x:Name="rootStackGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <AppBarButton x:Name="SaveButton"
+                      Icon="Save"
+                      Label="Save"
+                      HorizontalAlignment="Right"
+                      Click="SaveButton_Click"
+                      Grid.Row="0"/>
+        <Image Name="imageDetail"
+               Height="Auto"
+               Width="Auto"
+               Grid.Row="1"/>
     </Grid>
 </Page>
