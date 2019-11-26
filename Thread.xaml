@@ -12,11 +12,12 @@
     <ScrollViewer x:Name="rootScrollViewer">
         <StackPanel x:Name="ContentStackPanel" 
                     HorizontalAlignment="Left">
-            <ListView x:Name="threadListView">
+            <ListView x:Name="threadListView"
+                      SelectionMode="None">
                     <Grid  Margin="0,2,0,2" 
                            HorizontalAlignment="Stretch"
                            VerticalAlignment="Stretch"
-                           Background="#D0D0D0D0"
+                           Background="Transparent"
                            MinHeight="100">
                         <StackPanel>
                             <StackPanel  Orientation="Horizontal">
@@ -38,15 +39,17 @@
                                         HorizontalAlignment="Left"
                                         Tapped="Image_Tapped"/>
                                 <WebView  Custom:WebViewEx.Uri="{x:Bind threaditems.threadContent}"
-                                          MinHeight="400"
                                           MinWidth="600"
-                                          DefaultBackgroundColor="Transparent"/>
+                                          DefaultBackgroundColor="Transparent"
+                                          NavigationCompleted="WebView_NavigationCompleted"/>
                             </StackPanel>
                         </StackPanel>
-                    </Grid>
+                    <Border Name="Border" BorderBrush="LightGray" BorderThickness="0,0,0,1" Margin="4,0,4,0"/>
+                </Grid>
             </ListView>
             <ListView x:Name="contentListView"
-                      SelectionMode="None">
+                      SelectionMode="None"
+                      Background="Transparent">
                 <ListView.Template>
                     <ControlTemplate>
                         <ItemsPresenter />
@@ -59,7 +62,7 @@
                               Margin="0,2,0,2" 
                               HorizontalAlignment="Stretch"
                               VerticalAlignment="Stretch"
-                              Background="#D0D0D0D0"
+                              Background="Transparent"
                               MinHeight="100">
                             <StackPanel x:Name="rootStackPanel">
                                 <StackPanel x:Name="infoStackpanel"
@@ -89,11 +92,12 @@
                                            Tapped="Image_Tapped"/>
                                     <WebView x:Name="ThreadWebview"
                                              Custom:WebViewEx.Uri="{x:Bind threadContent}"
-                                             MinHeight="400"
                                              MinWidth="600"
-                                             DefaultBackgroundColor="Transparent"/>
+                                             DefaultBackgroundColor="Transparent"
+                                             NavigationCompleted="WebView_NavigationCompleted"/>
                                 </StackPanel>
                             </StackPanel>
+                            <Border Name="Border" BorderBrush="LightGray" BorderThickness="0,0,0,1" Margin="4,0,4,0"/>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

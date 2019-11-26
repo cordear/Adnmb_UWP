@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using AppStudio.Uwp.Controls;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App4
@@ -123,6 +124,36 @@ namespace App4
         {
             showMenu(true, (sender as Image));
             e.Handled = true;
+        }
+
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            contentListView.Width = (sender as TimeLine).ActualWidth;
+        }
+
+        private async void  ThreadWebview_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            var webView = sender as WebView;
+
+            int width;
+            int height;
+
+            // get the total width and height
+            var widthString = await webView.InvokeScriptAsync("eval", new[] { "document.body.scrollWidth.toString()" });
+            var heightString = await webView.InvokeScriptAsync("eval", new[] { "document.body.scrollHeight.toString()" });
+
+            if (!int.TryParse(widthString, out width))
+            {
+                throw new Exception("Unable to get page width");
+            }
+            if (!int.TryParse(heightString, out height))
+            {
+                throw new Exception("Unable to get page height");
+            }
+
+            // resize the webview to the content
+            webView.Width = width;
+            webView.Height = height;
         }
     }
 }

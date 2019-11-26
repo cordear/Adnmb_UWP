@@ -9,7 +9,9 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:muxcontrols="using:Windows.UI.Xaml.Controls"
     x:Class="App4.TimeLine"
+    xmlns:appStudio="using:AppStudio.Uwp.Controls"
     mc:Ignorable="d"
+    SizeChanged="Page_SizeChanged"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
@@ -34,9 +36,10 @@
                                   x:DataType="Custom:PostContent">
                         <Grid x:Name="grid" 
                               Margin="0,2,0,2" 
-                              Background="#D0D0D0D0"
                               MinHeight="100"
-                              Tapped="Grid_Tapped">
+                              Tapped="Grid_Tapped"
+                              Width="auto"
+                              Background="Transparent">
                             <StackPanel x:Name="rootStackPanel">
                                 <StackPanel x:Name="infoStackpanel"
                                             Orientation="Horizontal">
@@ -52,6 +55,7 @@
                                                Foreground="#FF005599"
                                                Margin="5,0,5,0"
                                                Text="{x:Bind idFormat}"/>
+                                    <Button x:Name=""
                                     <TextBlock x:Name="replyNumber"
                                                Text="{x:Bind replyCount}"
                                                Margin="5,0,5,0"/>
@@ -69,13 +73,15 @@
                                            Tapped="image_Tapped"/>
                                     <WebView x:Name="ThreadWebview"
                                              Custom:WebViewEx.Uri="{x:Bind threadContent}"
-                                             MinHeight="400"
                                              MinWidth="600"
-                                             DefaultBackgroundColor="Transparent"/>
+                                             DefaultBackgroundColor="Transparent"
+                                             NavigationCompleted="ThreadWebview_NavigationCompleted"
+                                             />
                                 </StackPanel>
                             </StackPanel>
-                        </Grid>
-                    </DataTemplate>
+                        <Border Name="Border" BorderBrush="LightGray" BorderThickness="0,0,0,1" Margin="4,0,4,0"/>
+                    </Grid>
+                </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
     </ScrollViewer>
