@@ -27,7 +27,7 @@ namespace App4
 
         private void SaveButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            imageSave.SaveImage((imageDetail.GetValue(Image.SourceProperty) as BitmapImage).UriSource);
+            ImageSave.SaveImage((imageDetail.GetValue(Image.SourceProperty) as BitmapImage).UriSource);
         }
 
     }

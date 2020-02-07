@@ -6,7 +6,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="Resources" />
-      <RootEvent Name="SizeChanged" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -94,6 +93,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="MinWidth" />
       <RootProperty Name="DefaultBackgroundColor" />
+      <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="NavigationCompleted" />
     </RootType>
     <RootType FullName="App4.sources.WebViewEx">
@@ -109,6 +109,16 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
       <RootMethod Name="GetToolTip" />
       <RootMethod Name="SetToolTip" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RichTextBlock">
+      <RootProperty Name="Blocks" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Paragraph">
+      <RootProperty Name="Inlines" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="App4.TimeLine" />
   </Roots.RootTypes>

@@ -17,7 +17,7 @@ namespace App4
     /// </summary>
     public sealed partial class Thread : Page
     {
-        ThreadItem threaditems;
+        ThreadItem _threaditems;
         public Thread()
         {
             this.InitializeComponent();
@@ -37,13 +37,13 @@ namespace App4
         {
             var uri = "https://adnmb2.com/api/thread/" + (string)e.Parameter;
             var result = GetPostContent(uri);
-            threaditems = JsonConvert.DeserializeObject<ThreadItem>(result);
-            contentListView.ItemsSource = threaditems.replys;
+            _threaditems = JsonConvert.DeserializeObject<ThreadItem>(result);
+            contentListView.ItemsSource = _threaditems.replys;
         }
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
-            threaditems.Dispose();
-            threaditems = null;
+            _threaditems.Dispose();
+            _threaditems = null;
         }
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {

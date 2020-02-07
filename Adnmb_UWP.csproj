@@ -126,6 +126,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sources\HtmlParser.cs" />
     <Compile Include="sources\imageSave.cs" />
     <Compile Include="sources\WebViewEx.cs" />
     <Compile Include="sources\PostContents.cs" />

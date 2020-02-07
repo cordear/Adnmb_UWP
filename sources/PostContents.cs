@@ -61,7 +61,7 @@ namespace App4.sources
 
     public class ThreadItem:IDisposable
     {
-        private bool disposed = false;
+        private bool _disposed = false;
         public string id { get; set; }
         public string fid { get; set; }
         public string img { get; set; }
@@ -89,7 +89,7 @@ namespace App4.sources
         // Protected implementation of Dispose pattern.
         protected virtual void Dispose(bool disposing)
         {
-            if (disposed)
+            if (_disposed)
                 return;
 
             if (disposing)
@@ -98,7 +98,7 @@ namespace App4.sources
                 replys = null;
             }
 
-            disposed = true;
+            _disposed = true;
         }
 
     }

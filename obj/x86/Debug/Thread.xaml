@@ -23,22 +23,22 @@
                             <StackPanel  Orientation="Horizontal">
                                 <TextBlock x:ConnectionId='23'  Foreground="#FFCC1105"
                                             Margin="0,0,5,0"
-                                                                             />
+                                                                              />
                                 <TextBlock x:ConnectionId='24'  Foreground="#FF117743"
                                             Margin="5,0,5,0"
-                                                                            />
+                                                                             />
                                 <TextBlock x:ConnectionId='25'  Foreground="#FF005599"
                                             Margin="5,0,5,0"
-                                                                                />
+                                                                                 />
                             </StackPanel>
-                            <TextBlock x:ConnectionId='20'                                  />
+                            <TextBlock x:ConnectionId='20'                                   />
                             <StackPanel  Orientation="Horizontal">
-                                <Image x:ConnectionId='21'                                      
+                                <Image x:ConnectionId='21'                                       
                                         MaxHeight="250"
                                         MaxWidth="250"
                                         HorizontalAlignment="Left"
                                                              />
-                                <WebView x:ConnectionId='22'                                                           
+                                <WebView x:ConnectionId='22'                                                            
                                           MinWidth="600"
                                           DefaultBackgroundColor="Transparent"
                                                                                            />

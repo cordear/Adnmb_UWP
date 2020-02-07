@@ -67,3 +67,5 @@ C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\AppStudio.Uwp.pri.xml
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885022160000000.json
 C:\Users\cg121\source\repos\App4\App4\obj\x86\Debug\Adnmb_UWP.csprojAssemblyReference.cache
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\AppStudio.Uwp\AppStudio.Uwp.xr.xml
+C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\AppStudio.Uwp\Properties\AppStudio.Uwp.rd.xml

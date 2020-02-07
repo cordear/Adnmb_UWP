@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>A40CABF20BEE9D3ED4218E5E9FDF8345DB97A085FD1BFF266F9A1D42A52CEE80</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>D9E6F72B0FA977C0533D05B9F3EF371ABE8D35258AD0F689C7B34EF9F01B07DE</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>5537e18a-58c1-43b2-9c0b-302d5210f89e_1.0.0.0_x86__08khnev4nxqxr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>5537e18a-58c1-43b2-9c0b-302d5210f89e_08khnev4nxqxr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>5537e18a-58c1-43b2-9c0b-302d5210f89e</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-26T11:47:01.983</Modified>
+      <Modified>2020-02-07T05:31:11.906</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App4.exe">
       <PackagePath>entrypoint\App4.exe</PackagePath>
-      <Modified>2019-11-26T11:47:01.476</Modified>
+      <Modified>2020-02-07T05:31:09.771</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\lindexi.uwp.src.imagestorage\1.0.0\lib\netcore50\imageuwp.dll">
       <PackagePath>imageuwp.dll</PackagePath>
@@ -65,6 +65,14 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T10:36:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\windowsappstudio.uwp\1.5.3\lib\uap10.0\AppStudio.Uwp\AppStudio.Uwp.xr.xml">
+      <PackagePath>AppStudio.Uwp\AppStudio.Uwp.xr.xml</PackagePath>
+      <Modified>2016-09-01T01:28:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\windowsappstudio.uwp\1.5.3\lib\uap10.0\AppStudio.Uwp\Properties\AppStudio.Uwp.rd.xml">
+      <PackagePath>AppStudio.Uwp\Properties\AppStudio.Uwp.rd.xml</PackagePath>
+      <Modified>2016-09-01T01:28:46.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\Assets\RE1Mu3b.png">
       <PackagePath>Assets\RE1Mu3b.png</PackagePath>
@@ -110,47 +118,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App4.xr.xml">
       <PackagePath>App4.xr.xml</PackagePath>
-      <Modified>2019-11-26T11:46:12.187</Modified>
+      <Modified>2019-11-28T15:18:49.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-11-26T11:47:01.295</Modified>
+      <Modified>2020-02-07T05:31:09.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\ImageDetail.xbf">
       <PackagePath>ImageDetail.xbf</PackagePath>
-      <Modified>2019-11-26T11:47:01.295</Modified>
+      <Modified>2020-02-07T05:31:09.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-11-26T11:47:01.295</Modified>
+      <Modified>2020-02-07T05:31:09.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Thread.xbf">
       <PackagePath>Thread.xbf</PackagePath>
-      <Modified>2019-11-26T11:47:01.296</Modified>
+      <Modified>2020-02-07T05:31:09.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\TimeLine.xbf">
       <PackagePath>TimeLine.xbf</PackagePath>
-      <Modified>2019-11-26T11:47:01.296</Modified>
+      <Modified>2020-02-07T05:31:09.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T09:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\windowsappstudio.uwp\1.5.3\lib\uap10.0\AppStudio.Uwp\AppStudio.Uwp.xr.xml">
-      <PackagePath>AppStudio.Uwp\AppStudio.Uwp.xr.xml</PackagePath>
-      <Modified>2016-09-01T01:28:46.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cg121\.nuget\packages\windowsappstudio.uwp\1.5.3\lib\uap10.0\AppStudio.Uwp\Properties\AppStudio.Uwp.rd.xml">
-      <PackagePath>AppStudio.Uwp\Properties\AppStudio.Uwp.rd.xml</PackagePath>
-      <Modified>2016-09-01T01:28:46.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-11-25T16:55:59.576</Modified>
+      <Modified>2020-02-07T05:31:10.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cg121\source\repos\App4\App4\bin\x86\Debug\Core\App4.exe">
       <PackagePath>App4.exe</PackagePath>
-      <Modified>2019-11-26T11:47:01.979</Modified>
+      <Modified>2020-02-07T05:31:11.882</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

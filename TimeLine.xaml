@@ -1,17 +1,12 @@
 ﻿<Page
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:App4"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Custom="using:App4.sources"
-    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:custom="using:App4.sources"
     xmlns:muxcontrols="using:Windows.UI.Xaml.Controls"
     x:Class="App4.TimeLine"
-    xmlns:appStudio="using:AppStudio.Uwp.Controls"
     mc:Ignorable="d"
-    SizeChanged="Page_SizeChanged"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
@@ -22,9 +17,9 @@
     </Page.Resources>
 
 
-    <ScrollViewer x:Name="rootScrollViewer"
+    <ScrollViewer x:Name="RootScrollViewer"
                   ViewChanged="rootScrollViewer_ViewChanged">
-            <ListView x:Name="contentListView"
+            <ListView x:Name="ContentListView"
                       SelectionMode="None">
                 <ListView.Template>
                     <ControlTemplate>
@@ -33,13 +28,13 @@
                 </ListView.Template>
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="thread"
-                                  x:DataType="Custom:PostContent">
+                                  x:DataType="custom:PostContent">
                         <Grid x:Name="grid" 
                               Margin="0,2,0,2" 
                               MinHeight="100"
                               Tapped="Grid_Tapped"
-                              Width="auto"
-                              Background="Transparent">
+                              Background="Transparent"
+                              Width="auto">
                             <StackPanel x:Name="rootStackPanel">
                                 <StackPanel x:Name="infoStackpanel"
                                             Orientation="Horizontal">
@@ -55,7 +50,6 @@
                                                Foreground="#FF005599"
                                                Margin="5,0,5,0"
                                                Text="{x:Bind idFormat}"/>
-                                    <Button x:Name=""
                                     <TextBlock x:Name="replyNumber"
                                                Text="{x:Bind replyCount}"
                                                Margin="5,0,5,0"/>
@@ -72,11 +66,17 @@
                                            ContextRequested="image_ContextRequested"
                                            Tapped="image_Tapped"/>
                                     <WebView x:Name="ThreadWebview"
-                                             Custom:WebViewEx.Uri="{x:Bind threadContent}"
+                                             custom:WebViewEx.Uri="{x:Bind threadContent}"
                                              MinWidth="600"
                                              DefaultBackgroundColor="Transparent"
                                              NavigationCompleted="ThreadWebview_NavigationCompleted"
+                                             VerticalAlignment="Top"
                                              />
+                                <RichTextBlock>
+                                    <Paragraph>
+                                        <Run Foreground="red">test</Run>
+                                    </Paragraph>
+                                </RichTextBlock>
                                 </StackPanel>
                             </StackPanel>
                         <Border Name="Border" BorderBrush="LightGray" BorderThickness="0,0,0,1" Margin="4,0,4,0"/>
